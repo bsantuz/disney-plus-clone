@@ -1,0 +1,452 @@
+@font-face {
+    font-family: Avenir;
+    src: url(https://static-assets.bamgrid.com/fonts/avenir-world/AvenirWorld.ca722da1c78901cdb9b2d63c4b3525b8.woff2);
+}
+
+/**     Estruturas básicas   **/
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    font-family: Avenir,sans-serif;
+    font-size: 15px;
+
+    color: #f9f9f9;
+}
+body{
+    background-color: rgb(4,7,20);
+}
+
+h1, h3, p{
+    width: 100%;
+    margin-bottom: 20px ;
+
+    text-align: center;
+}
+
+h1{
+    font-size: 44px;
+}
+
+h3{
+    margin-top: 24px;
+
+    font-size: 28px;
+    font-weight: 700;
+    letter-spacing: normal;
+}
+
+p{
+    font-size: 20px;
+    text-align: justify;
+
+    color: #c0c0c0;
+}
+
+a{
+    text-decoration: none;
+}
+a:hover{
+    color: #fff;
+}
+
+section{
+    padding: 5.8vw;
+}
+
+picture {
+    display: block;
+
+    width: 100%;
+    height: auto;
+}
+picture img{
+    display: block;
+
+    width: 100%;
+    height: auto;
+
+    margin: auto;
+
+    border-radius: 1%;
+}
+
+select{
+    border: none;
+
+    background: none;
+}
+option{
+    color:#000000;
+}
+
+/**     Estruturas básicas   **/
+/**     header/main/footer   **/
+
+header{
+    padding: 6vw;
+
+    background-image: url(img/bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    #logo{
+        width: 320px;
+        height: 174;
+
+        margin-bottom: 24px;
+    }
+
+    a{
+        width: 100%;
+        max-width: 700px;
+    }
+
+} // header
+
+main{
+
+    background-color: rgb(4,7,20);
+    
+    #container-escolha-seu-plano{
+        display: flex;
+        text-align: center;
+        justify-content:space-around;
+
+        scroll-behavior: smooth;
+
+        #plano-popular{
+            background-image: url("img/Planos/pop.png");
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size:contain;
+        }
+
+        ul{
+            margin: 0 12px;
+        }
+        li{
+            max-width: 380px;
+            padding: 60px 44px 0;
+
+            list-style: none;
+
+            img{
+                width: 224px;
+            }
+
+            p{
+                font-size: 18px;
+            }
+        }
+    }//container-escolha-seu-plano
+
+    .img-fundo-baixar-filmes{
+        background-image: url("img/baixar2.png");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size:87% 92%;
+    }
+
+}//main
+
+footer{
+    padding: 10px;
+
+    background-color: rgb(4,7,20);
+}//footer
+
+/**     header/main/footer   **/
+/**     Estruturas repetitivas   **/
+
+// 1- Layout
+
+.center{ // alinha ao centro na vertical
+    display: flex;
+    justify-content: center;
+
+    width: 100%;
+    margin: 0 auto;
+
+    text-align: center;
+}
+
+.txt-obs{//textos especificos de tamanho pequeno 
+    margin: 24px 0;
+    font-size: 12px;
+    color: #c0c0c0;
+}
+
+.container{// Caixa para conteudos
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    padding: 0 2vw;
+    
+    vertical-align: middle;
+}
+
+.alinha-lado{
+    flex: 0 0 50%;
+    max-width: 50%;    
+}
+.alinha-lado-section {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+#links-finais{
+    padding: 0 12vw;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+
+}
+
+// 1 - Layout
+// 2 - botões e links
+
+//button : configuração para botões não especificos
+.button{
+    background: #6421ff;
+    padding: 14px;
+    border-radius: 4px;
+    margin: 5px;
+
+    text-align: center;
+    text-decoration: none;
+
+}
+.button:hover{
+    background-color: rgb(120, 40, 255);
+    transition: all .2s ease 0s;
+}
+//button não especifico
+
+//navegador do header fixo
+#entrar_conta {
+    display: flex;
+    justify-content: right;
+
+    width: 100vw;
+    padding: 10px 36px;
+    position: fixed;
+    top: 0;
+    right:0;
+    left:0;
+
+    background-color: "none";
+    vertical-align: middle;
+
+    nav{
+        display: flex;
+        flex-direction: row;
+        align-items: end;
+        justify-content: right;
+    }
+
+    //botão especifico para ir para a pagina de login
+    #btn-entrar{
+
+        display: flex;
+
+        position: relative;
+
+        width: auto;
+        padding: 8px 16px;
+        margin: 5px;
+        
+        border: 1px solid #f9f9f9;
+        border-radius: 5px;
+
+        text-decoration: none;
+        line-height: 2rem;
+
+        background-color: rgba(0,0,0,.8);
+    }
+    #btn-entrar:hover{
+
+        border: 1px solid rgb(255, 255, 255);
+
+        background-color: rgb(255, 255, 255);
+        color: rgb(0, 0, 0);
+
+        transition: all .2s ease 0s;
+    }
+    //botão entrar
+}
+//navegador
+
+#dispositivos{
+    align-items: center;
+
+    ul{
+        list-style-type: none;
+        display: flex;
+    }
+}
+
+#perguntas-recentes {
+    display: flex;
+    flex-direction: column;
+
+    button{
+        width: 100%;
+
+        margin-bottom: 12px;
+        padding: 18px;
+
+        border: none;
+
+        background-color: #13151d;
+
+        div{
+            display: flex;
+            justify-content: space-between;
+
+            span:nth-child(2){
+                font-weight: 500;
+                font-size: 28px;
+                line-height: 16px;
+            }
+        }
+
+        .resposta-FAQ{
+            display: none;
+            p{
+                text-align: left;
+            }
+        }
+    }
+    button:hover{
+        cursor: pointer;
+    }
+}
+
+// 2 - botões e links
+// 3 - controle de img
+
+#container-imgs{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    justify-content: center;
+}
+
+#container-imgs picture{
+    flex: 0 0 33%;
+
+    justify-content: space-around;
+    max-width: 33%; 
+
+    padding: 8px;
+    margin: 0;
+
+    border-radius: 10%;
+}
+
+#logo2{//começa escondido para depois aparecer 
+    display: none;
+
+    width: 80px;
+}
+
+// 3 - controle de img
+// 4 - Animações
+
+@keyframes bounce {
+
+0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+}
+40% {
+    transform: translateY(-7px);
+}
+60% {
+    transform: translateY(-3.5px);
+}
+}
+
+@media screen and (max-width: 1000px){
+    h1, h2 {
+        font-size: 25px;
+        line-height: 36px;
+    }
+    h3 {
+        font-size: 22px;
+        line-height: 32px;
+    }
+    p{
+        font-size: 15px;
+        line-height: 25px;
+    }
+
+    header
+    {
+        a{
+            left:47%;
+        }
+        padding-top: 70vw;
+        padding: 40vw 5vw 20vw;
+    
+        background-image: url(img/bg-mobile.jpg);
+        background-repeat: no-repeat;
+        background-size:cover;
+        background-position:top right;
+
+        #logo{width: 180px;}
+    } // header
+
+    ul{flex-wrap: wrap;}
+
+    section{padding: 10vw 5vw;}
+
+    picture img{border-radius: 10%;}
+
+    .alinha-lado
+    {
+        flex: 0 0 100%;
+        max-width: 100%;    
+    }
+
+    main {
+        .container{padding: 0 2vw;}
+
+        .alinha-lado-section {flex-direction: column;}
+
+        #container-escolha-seu-plano{flex-wrap: wrap;}
+
+        #container-imgs picture
+        {
+            flex: 0 0 40%;
+        
+            max-width: 40%; 
+        
+            padding: 8px;
+            margin: 0;
+        
+            border-radius: 20%;
+        }
+
+        .img-fundo-baixar-filmes
+        {
+            background-image: url("img/baixar.png");
+            background-position: top;
+            background-size:90%;
+
+            div{
+                margin-top:65%;
+            }
+            picture{
+                display:none;
+            }
+        }
+    }
+    
+}
